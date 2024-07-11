@@ -1,13 +1,13 @@
 name: Deployment 1
 on: push
-jobs : 
+jobs: 
   test:
     runs-on: ubuntu-latest
       steps:
         - name: Get code
           uses: actions/checkout@v3
         - name: Install Dependencies
-          uses: npm ci
+          run: npm ci
         - name: Run Lint
           run: npm run lint
         - name: Run Test
